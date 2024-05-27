@@ -1,0 +1,228 @@
+/* element styles */
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100%;
+    margin: .25em;
+    padding: .25em;
+    background-image: linear-gradient(
+	    30deg, skyblue 0%, rgb(158, 212, 235) 50%,  white 100%); /* gradient background blue to white */
+    border: 2px solid black; /* place a 2px border around page body */
+    border-radius: 25px; /* radius the corners of the border by 25px */
+    box-shadow: 5px 5px 0 0;
+    width: 98%;
+}
+a{font-weight: bold;}
+a:link{color:blue;}
+a:visited{color:blueviolet;}
+a:hover, a:focus{color:red;}
+
+ul{line-height: 1.5;}
+li, p{font-size: 95%;}
+em{font-weight: bold;}
+
+/* header styles */
+header h1{
+    font-size: 220%;
+    color:black;
+    text-align: center;
+    text-shadow: 2px 2px 2px blueviolet;
+    margin: .25em;
+    padding: .25em;
+    border-bottom: 3px solid black;
+}
+
+/* nav menu styles */
+#nav_menu ul{
+    text-align: center;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#nav_menu ul li{
+    display: block;
+    border-radius: 5px;
+    flex-basis: 20%;
+    background-color: black;
+    font-weight: bold;
+}
+
+/* mobile menu styles */
+#mobile_menu{
+    display: none; /* do not display mobile menu by default */
+}
+
+/* main styles */
+main{
+    display: flex;
+    border-top: 3px solid black;
+    margin: .25em;
+    padding: .25em;
+}
+main h2{ /* h2 styles */
+    font-size: 160%;
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 2px blueviolet;
+    margin: .25em;
+    padding: .25em
+}
+main h4{ /* h4 styles */
+    font-size: 120%;
+    color: black;
+    text-align: left;
+    text-shadow: 2px 2px 2px blueviolet;
+    text-decoration: underline;
+    margin: .25em;
+    padding: .25em;
+}
+main p{ /* p styles */
+    font-size: 100%;
+    color: black;
+    text-align: left;
+    margin: .25em;
+    padding: .25em;
+}
+main ul{ /* unsorted list styles */
+    margin-left: .25em;
+    padding: 0;
+}
+main ul li{ /* unsorted list line item styles */
+    margin-left: .25em;
+    padding: 0;
+}
+
+
+
+/* article styles */
+article{ 
+    flex-basis: 55%; /* set article to 55% of the width */
+    margin: .5em;
+    padding: .5em;
+}
+article img{
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+}
+
+/* aside styles */
+aside{
+    flex-basis: 45%; /* set aside to 45% of the width */
+    padding: .5em;
+    margin: .5em;
+}
+aside img{
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+}
+aside video{
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+}
+
+/* footer styles */
+footer p{
+    font-size: 100%;
+    color: black;
+    text-align: center;
+    margin: .25em;
+    padding: .25em;
+    border-top: 3px solid black;
+}
+
+/* screens less than 700px */
+@media only screen and (max-width: 700px){ /*set styles for screens less than or equal to 700px */
+    #nav_menu{display: none;} /* for smaller screen, do not display nav menu */
+    #mobile_menu{ /* display mobile menu in place of nav menu */
+        display: block;
+        grid-area: navi;
+    }
+    .slicknav_menu {
+		background-color: black !important;
+	}
+    main{
+        flex-direction: column;
+    }
+    header h1{
+        font-size: 100%;
+        color:black;
+        text-align: center;
+        text-shadow: 2px 2px 2px blueviolet;
+        margin: .25em;
+        padding: .25em;
+        border-bottom: 3px solid black;
+    }
+    main h2{
+        font-size: 100%;
+        color: black;
+        text-align: center;
+        text-shadow: 2px 2px 2px blueviolet;
+        margin: .25em;
+        padding: .25em
+    }
+    main h4{
+        font-size: 100%;
+        color: black;
+        text-align: left;
+        text-shadow: 2px 2px 2px blueviolet;
+        text-decoration: underline;
+        margin: .25em;
+        padding: .25em;
+    }
+    main p{
+        font-size: 80%;
+        color: black;
+        text-align: left;
+        margin: .25em;
+        padding: .25em;
+    }
+    main ul{
+        margin-left: .25em;
+        padding: 0;
+    }
+    main ul li{
+        margin-left: .25em;
+        padding: 0;
+    }
+
+    /* article */
+    article{ /* set article to display before aside when screen collapses from two columns to 1 */
+        order: 1
+    }
+    article img{
+        width: 100%;
+        max-width: 700px;
+        margin: 0;
+    }
+
+    /* aside */
+    aside{
+        order: 2;
+    }
+    aside img{
+       width: 100%;
+       max-width: 700px;
+       margin: 0;
+    }
+    aside video{
+       width: 100%;
+       max-width: 700px;
+       margin: 0;
+    }
+
+/* footer */
+    footer p{
+       font-size: 100%;
+       color: black;
+       text-align: center;
+       margin: .25em;
+       padding: .25em;
+       border-top: 3px solid black;
+    }
+
+}

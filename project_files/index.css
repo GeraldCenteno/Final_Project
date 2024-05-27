@@ -1,0 +1,124 @@
+/* reset selector */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* elements */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+/*    background-color: skyblue; */
+    margin: .25em;
+    padding: .25em;
+    background-image: linear-gradient(
+	    30deg, skyblue 0%, rgb(158, 212, 235) 50%,  white 100%);
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 5px 5px 0 0;
+    width: 98%;
+}
+
+img{
+    float: right;
+    margin-left: 1em;
+}
+a{font-weight: bold;}
+a:link{color:blue;}
+a:visited{color:blueviolet;}
+a:hover, a:focus{color:red;}
+
+ul{line-height: 1.5;}
+li, p{font-size: 95%;}
+em{font-weight: bold;}
+
+/* header */
+header img{
+    float: left;
+    margin: .25em;
+    padding: .25em;
+}
+header h1{
+    font-size: 220%;
+    color:black;
+    text-align: center;
+    text-shadow: 2px 2px 2px blueviolet;
+    margin: .25em;
+    padding: .25em;
+    border-bottom: 3px solid black;
+}
+header p{
+    font-size: 130%;
+    color: black;
+    text-align: left;
+    margin: .25em;
+    padding: .25em;
+}
+/* main */
+main{
+    clear: left;
+    border-top: 3px solid black;
+    width: 95%;
+    margin: 20px;
+    padding: 10px;
+}
+main h2{
+    font-size: 160%;
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 2px blueviolet;
+    margin: .25em;
+    padding: .25em
+}
+main h4{
+    font-size: 120%;
+    color: black;
+    text-align: left;
+    text-shadow: 2px 2px 2px blueviolet;
+    text-decoration: underline;
+    margin: .25em;
+    padding: .25em;
+}
+main p{
+    font-size: 100%;
+    color: black;
+    text-align: left;
+    margin: .25em;
+    padding: .25em;
+}
+main ul{
+    margin-left: 1.5em;
+    padding: 0;
+}
+main ul li{
+    margin-left: 1.5em;
+    padding: 0;
+}
+
+/* nav */
+#nav_menu ul{
+    list-style-type: none;
+/*    padding: 1em 0;
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black; */
+}
+#nav_menu ul li{
+/*    display: inline;
+    padding: 0 1.5em; */
+    float:left;
+}
+#nav_menu ul li a{
+    text-align: center;
+    display: block;
+    border-radius: 3px;
+    width: 130px;
+    padding: .5em 0; /* padding above and below a elements */
+    text-decoration: none;
+    background-color: black;
+    font-weight: bold;
+}
+#nav_menu ul li a.lastitem{ border-right: none;}
+#nav_list ul li a.current{
+    text-decoration: none;
+}
