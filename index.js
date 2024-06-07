@@ -1,8 +1,8 @@
-const http = require('http');   //create an http server
-const fs = require('fs');       //create a file handler to read files
-const path = require('path');   //create a path resolver
+import { createServer } from 'http';   //create an http server
+import { readFile } from 'fs';       //create a file handler to read files
+import { join } from 'path';   //create a path resolver
 
-http.createServer((req, res) => {
+createServer((req, res) => {
     let url = req.url;
 
     //switch to resolve common pagename to filename
@@ -39,13 +39,13 @@ http.createServer((req, res) => {
             break;
     }
 
-    const filePath = path.join(__dirname, url);
+    const filePath = join(__dirname, url);
 
     //error checking
-    fs.readFile(filePath, (err, data) => {
+    readFile(filePath, (err, data) => {
         if (err) {
             if(err.code === 'ENOENT') {
-                fs.readFile(__dirname + '/error.html', (_err, data) => {
+                readFile(__dirname + '/error.html', (_err, data) => {
                     res.end(data);
                 });
             }
