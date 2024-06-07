@@ -5,10 +5,32 @@ import { join } from 'path';   //create a path resolver
 createServer((req, res) => {
     let url = req.url;
 
+    if(url === '/')
+        url = 'index.html';
+    else if(url === 'level0')
+        url = 'level0.html';
+    else if(url === 'level1')
+        url = 'level1.html';
+    else if(url === 'level2')
+        url = 'level2.html';
+    else if(url === 'level3')
+        url = 'level3.html';
+    else if(url === 'level4')
+        url = 'level4.html';
+    else if(url === 'level5')
+        url = 'level5.html';
+    else if(url === 'thelaw')
+        url = 'thelaw.html';
+    else if(url === 'opnav')
+        url = 'opnav.html';
+    else
+        url = 'error.html';
+
+    /*
     //switch to resolve common pagename to filename
     switch(url){
         case '/':
-            url = 'index.html';
+            url = '/index.html';
             break;
         case '/level0':
             url = 'level0.html';
@@ -37,7 +59,7 @@ createServer((req, res) => {
         default:
             url = 'error.html';
             break;
-    }
+    }*/
 
     const filePath = join(__dirname, url);
 
