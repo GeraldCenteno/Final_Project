@@ -6,6 +6,14 @@
 	<title>Motorcycle Training - The Law</title>
 	<link rel="shortcut icon" href="project_files/kawi.png">
 	<link rel="stylesheet" href="project_files/style.css">
+	<link rel="stylesheet" href="project_files/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
 </head>
 
 <body>
@@ -14,6 +22,19 @@
 	</header>
 
 	<nav id="nav_menu">
+		<ul>
+			<li><a href="/">Home Page</a></li>
+			<li><a href="/level0">Level 0</a></li>
+			<li><a href="/level1">Level 1</a></li>
+			<li><a href="/level2">Level 2</a></li>
+			<li><a href="/level3">Level 3</a></li>
+			<li><a href="/level4">Level 4</a></li>
+			<li><a href="/level5">Level 5</a></li>
+			<li><a href="/thelaw">Washington Law</a></li>
+			<li><a href="/opnav">OPNAVINST</a></li>
+		</ul>
+	</nav>
+	<nav id="mobile_menu">
 		<ul>
 			<li><a href="/">Home Page</a></li>
 			<li><a href="/level0">Level 0</a></li>
@@ -43,24 +64,24 @@
 				<li><a href="https://app.leg.wa.gov/rcw/default.aspx?cite=46.20.515">RCW 46.20.515</a> - Motorcycle skills testing</li>
 			</ul>
 			<br>
-			<img src="project_files/chips.gif" alt = "Five In Motion">
+			<img src="project_files/chips.gif" alt = "Five In Motion" onmouseover="this.src='project_files/PeeweeHerman.jpg'" onmouseout="this.src='project_files/chips.gif'">
 			<p>LA 7 Mary 3 and 7 Mary 4, in motion.</p>
 		</p>  
 		</article>
 		
 		<aside>
 			<br>
-			<img src = "project_files/Original-Chips-Show-Motorcycles.jpg" alt = "Ponch & Jon 1977">
+			<img src = "project_files/Original-Chips-Show-Motorcycles.jpg" alt = "Ponch & Jon 1977" onmouseover="this.src='project_files/PeeweeHerman.jpg'" onmouseout="this.src='project_files/Original-Chips-Show-Motorcycles.jpg'">
 			<p>CHP officers Poncherello and Baker, late 1970s.</p>
 			<br>
 			<br>
-			<img src = "project_files/Chips9916wm5.jpg" alt = "Jon & Ponch 1999">
+			<img src = "project_files/Chips9916wm5.jpg" alt = "Jon & Ponch 1999" onmouseover="this.src='project_files/PeeweeHerman.jpg'" onmouseout="this.src='project_files/Chips9916wm5.jpg'">
 			<p>CHP officers Baker and Poncherello, late 1990s.</p>
 		</aside>
 	</main>
 	
 	<footer>
-		<p>This site has been tested on Google Chrome 125.0.6422.113, Microsoft Edge 125.0.2535.79, and Mozilla Firefox 126.0.1</p>
+		<p>This site has been tested on Google Chrome 125.0.6422.142, Microsoft Edge 125.0.2535.92, Mozilla Firefox 126.0.1</p>
 	</footer>
 </body>
 

@@ -6,6 +6,14 @@
 	<title>Motorcycle Training - Level 3</title>
 	<link rel="shortcut icon" href="project_files/kawi.png">
 	<link rel="stylesheet" href="project_files/style.css">
+	<link rel="stylesheet" href="project_files/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
 </head>
 
 <body>
@@ -14,6 +22,19 @@
 	</header>
 
 	<nav id="nav_menu">
+		<ul>
+			<li><a href="/">Home Page</a></li>
+			<li><a href="/level0">Level 0</a></li>
+			<li><a href="/level1">Level 1</a></li>
+			<li><a href="/level2">Level 2</a></li>
+			<li><a href="/level3">Level 3</a></li>
+			<li><a href="/level4">Level 4</a></li>
+			<li><a href="/level5">Level 5</a></li>
+			<li><a href="/thelaw">Washington Law</a></li>
+			<li><a href="/opnav">OPNAVINST</a></li>
+		</ul>
+	</nav>
+	<nav id="mobile_menu">
 		<ul>
 			<li><a href="/">Home Page</a></li>
 			<li><a href="/level0">Level 0</a></li>
@@ -40,20 +61,20 @@
 			<li><a href="https://www.swmotosafety.com/classes/irt/">SW Motorcycle Safety Intermediate Rider Training</a></li>
 		</ul>
 		<br>
-		<img src = "project_files/exam.jpeg" alt = "Endorsement Test">
+		<img src = "project_files/exam.jpeg" alt = "Endorsement Test" onmouseover="this.src='project_files/PeeweeHerman.jpg'" onmouseout="this.src='project_files/exam.jpeg'">
 		<p>Students are queueing for their practical exam.</p>
 		<br>
 		</article>
 
 		<aside>
 			<br>
-			<img src = "project_files/test.jpg" alt = "Skills Test">
+			<img src = "project_files/test.jpg" alt = "Skills Test" onmouseover="this.src='project_files/PeeweeHerman.jpg'" onmouseout="this.src='project_files/test.jpg'">
 			<p>A student is taking the weave portion of the practical exam. Take note of her left hand; she has the clutch partially engaged, meaning she is working in the friction zone. Not pictured: her right foot is also on the rear brake. Blending these controls creates gyroscopic stability by forcing the engine to rev higher while slipping the clutch and dragging the rear brake. In other worse, she is creating upright slow-speed stability.</p>
 		</aside>
 	</main>
 
 	<footer>
-		<p>This site has been tested on Google Chrome 125.0.6422.113, Microsoft Edge 125.0.2535.79, and Mozilla Firefox 126.0.1</p>
+		<p>This site has been tested on Google Chrome 125.0.6422.142, Microsoft Edge 125.0.2535.92, Mozilla Firefox 126.0.1</p>
 	</footer>
 </body>
 
